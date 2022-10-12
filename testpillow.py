@@ -17,6 +17,34 @@ from PIL import Image, ImageDraw, ImageFont
 
 # width – The line width, in pixels.
 
+# This is a begin experiment comment in the code section of the readymessage section
+happyErrors = 0
+sadErrors = 0
+angryErrors = 0
+fearfulErrors = 0
+
+happyHighIntensityErrors = 0
+happyLowIntensityErrors = 0
+sadHighIntensityErrors = 0
+sadLowIntensityErrors = 0
+angryHighIntensityErrors = 0
+angryLowIntensityErrors = 0
+fearfulHighIntensityErrors = 0
+fearfulLowIntensityErrors = 0
+
+misattributedHappySad = 0
+misattributedHappyAngry = 0
+misattributedHappyFearful = 0
+misattributedSadHappy = 0
+misattributedSadAngry = 0
+misattributedSadFearful = 0
+misattributedAngryHappy = 0
+misattributedAngrySad = 0
+misattributedAngryFearful = 0
+misattributedFearfulHappy = 0
+misattributedFearfulSad = 0
+misattributedFearfulAngry = 0
+
 total = 24
 
 widthmain = 480
@@ -75,17 +103,21 @@ totalerrorsgraph.show()
 # img  = Image.new( mode = "RGB", size = (width, height),color = (255,255,255) )
 # ImageDraw.rectangle((0,10),(100,100), fill= "#ffffff", outline=None, width=1)
 
+happyErrors = 0
+sadErrors = 0
+angryErrors = 0
+fearfulErrors = 0
+
 emotions = ['happy','sad','angry','fearful']
 
 maingraphwidth = 
 
-def misattributionsfrom(emotions)
-    totalerrors = emotions + 'errors'
-    emotions + 'errors' = 1
-    for i in emotions
-        currentgraph = emotions + "errorsgraph"
-        currentgraph(emotions)
-        
+startx = 0
 
-    print(str(emotions + "errorgraph")) = 1)
+def misattributionsfrom(emotions):
+    for i in emotions:
+    graphend = eval(emotions[i] + 'Errors') + startx
     
+    startx = graphend = eval(emotions[i] + 'Errors')
+    
+    'happy' + str(i) = 2
