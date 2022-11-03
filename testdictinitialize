@@ -1,0 +1,28 @@
+import os
+import time
+
+dictionaryloop2 = 0
+
+dictionarydefinitions = ["skippedErrors","totalErrors","totalerrors","happyHighIntensityErrors","happyLowIntensityErrors",
+                         "sadHighIntensityErrors","sadLowIntensityErrors","angryHighIntensityErrors",
+                         "angryLowIntensityErrors","fearfulHighIntensityErrors","fearfulLowIntensityErrors",
+                         "happyErrors","sadErrors","angryErrors","fearfulErrors","lowIntensityErrors",
+                         "highIntensityErrors","misattributedHappySad","misattributedHappyAngry",
+                         "misattributedHappyFearful","misattributedSadHappy","misattributedSadAngry",
+                         "misattributedSadFearful","misattributedAngryHappy","misattributedAngrySad",
+                         "misattributedAngryFearful","misattributedFearfulHappy","misattributedFearfulSad",
+                         "misattributedFearfulAngry","errorsByMisjudgement","danvasubtest","maleHappyErrors",
+                         "maleSadErrors","maleAngryErrors","maleFearfulErrors","maleTotalErrors",
+                         "femaleHappyErrors","femaleSadErrors","femaleAngryErrors","femaleFearfulErrors","femaleTotalErrors",]
+
+for i in dictionarydefinitions:
+    g = i
+    g = 1
+    
+for i in (dictionarydefinitions):
+    [dictionarydefinitions[dictionaryloop2]] = 0
+    # I have no idea what I was doing with the below.  It should probably just go in the other section
+    # stimsList['stim'+str((dictdefincr2 - 1))] = (currentLoop.trialList[(dictdefincr2)-1]['stimFile'])
+    dictionaryloop2 = dictionaryloop2 + 1
+
+[dictionarydefinitions[dictionaryloop2]]

@@ -84,6 +84,17 @@ misattributedAngryFearful = 0
 misattributedFearfulHappy = 0
 misattributedFearfulSad = 0
 misattributedFearfulAngry = 0
+maleHappyErrors = 0
+maleSadErrors = 0
+maleAngryErrors = 0
+maleFearfulErrors = 0
+maleTotalErrors = 0
+femaleHappyErrors = 0
+femaleSadErrors = 0
+femaleAngryErrors = 0
+femaleFearfulErrors = 0
+femaleTotalErrors = 0
+
 
 # This is to set the number of the trial for scoring the right data
 
@@ -95,7 +106,9 @@ dictionarydefinitions = ["skippedErrors","totalErrors","totalerrors","happyHighI
                          "misattributedHappyFearful","misattributedSadHappy","misattributedSadAngry",
                          "misattributedSadFearful","misattributedAngryHappy","misattributedAngrySad",
                          "misattributedAngryFearful","misattributedFearfulHappy","misattributedFearfulSad",
-                         "misattributedFearfulAngry","errorsByMisjudgement","danvasubtest",]
+                         "misattributedFearfulAngry","errorsByMisjudgement","danvasubtest","maleHappyErrors",
+                         "maleSadErrors","maleAngryErrors","maleFearfulErrors","maleTotalErrors",
+                         "femaleHappyErrors","femaleSadErrors","femaleAngryErrors","femaleFearfulErrors","femaleTotalErrors",]
 # this is a comment "before experiment"
 
 
@@ -537,6 +550,15 @@ for i in currentLoop.trialList :
         # this will give us the errors
         correctAnswerKey = currentLoop.trialList[dictionaryloop]['correctAnswer']
         
+        if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+            maleTotalErrors = maleTotalErrors + 1
+        elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+            femaleTotalErrors = femaleTotalErrors + 1
+        else: 
+            pass
+        
+        
+        
         if  currentLoop.trialList[dictionaryloop]['intensity'] == 1:
             lowIntensityErrors = lowIntensityErrors + 1
         elif currentLoop.trialList[dictionaryloop]['intensity'] == 2:
@@ -562,6 +584,12 @@ for i in currentLoop.trialList :
                 misattributedHappyFearful = misattributedHappyFearful + 1
             else:
                 pass
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+                maleHappyErrors = maleHappyErrors + 1
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+                femaleHappyErrors = femaleHappyErrors + 1
+            else: 
+                pass
             
         if correctAnswerKey == 2:
             sadErrors = sadErrors + 1
@@ -579,6 +607,13 @@ for i in currentLoop.trialList :
             elif response == 4:
                 misattributedSadFearful = misattributedSadFearful + 1
             else:
+                pass
+            
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+                maleSadErrors = maleSadErrors + 1
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+                femaleSadErrors = femaleSadErrors + 1
+            else: 
                 pass
             
         if correctAnswerKey == 3:
@@ -599,6 +634,13 @@ for i in currentLoop.trialList :
             else:
                 pass
             
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+                maleAngryErrors = maleAngryErrors + 1
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+                femaleAngryErrors = femaleAngryErrors + 1
+            else: 
+                pass
+            
         if correctAnswerKey == 4:
             fearfulErrors = fearfulErrors + 1
             if  currentLoop.trialList[dictionaryloop]['intensity'] == 1:
@@ -614,6 +656,13 @@ for i in currentLoop.trialList :
                 misattributedFearfulSad = misattributedFearfulSad + 1
             elif response == 3:
                 misattributedFearfulAngry = misattributedFearfulAngry + 1
+            else:
+                pass
+            
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+                maleFearfulErrors = maleFearfulErrors + 1
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+                femaleFearfulErrors = femaleFearfulErrors + 1
             else:
                 pass
             
@@ -640,7 +689,7 @@ for i in (dictionarydefinitions):
     data_dict [dictionarydefinitions[dictionaryloop2]] = (eval(dictionarydefinitions[dictionaryloop2]))
     # I have no idea what I was doing with the below.  It should probably just go in the other section
     # stimsList['stim'+str((dictdefincr2 - 1))] = (currentLoop.trialList[(dictdefincr2)-1]['stimFile'])
-    dictionaryloop2 = dictionaryloop2 + 1
+    dictionaryloop2 = dictionaryloop2 + 1+
 
 
 data_dict.update(stimsList)

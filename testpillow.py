@@ -108,16 +108,41 @@ sadErrors = 0
 angryErrors = 0
 fearfulErrors = 0
 
-emotions = ['happy','sad','angry','fearful']
+emotion = ['happy','sad','angry','fearful']
 
-maingraphwidth = 
+widthmain = 480
+heightmain = 30
+w, h = 480, 30
+mainerrorsincrement = widthmain/24
+
+possibleerrorsmisattribute = 18
+widthmisattribute = 300
+heightmisattribute = 16
+errorsincrementmisattribute = (widthmisattribute/possibleerrorsmisattribute)
 
 startx = 0
+endx = 0
 
-def misattributionsfrom(emotions):
-    for i in emotions:
-    graphend = eval(emotions[i] + 'Errors') + startx
+graphs = ['main','happymisattributiongraph','sadmisattributiongraph','angrymisattributiongraph','fearfulmisattributiongraph']
+
+
+# currentgraph = emotion[i]+ 'misattributiongraph'  This Works!!
+
+def graph(graphs):
+    for i in graphs:
+        if graphs == 'main':
+            for i in emotion:
+                currentrectangle = emotion[i]
+                startx = endx
+                endx = endx + (eval(emotion[i]+'Errors')) * mainerrorsincrement #this gives us the length for the current graph
+                happyerrorsrectangle.rectangle(happyrectangle, fill =happycolor, outline=None)
+                saderrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
+                angryerrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
+                fearfulerrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
+                
+                
+
     
-    startx = graphend = eval(emotions[i] + 'Errors')
+    startx = graphend = eval(emotion[i] + 'Errors')
     
-    'happy' + str(i) = 2
+    
