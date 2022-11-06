@@ -18,11 +18,11 @@ from PIL import Image, ImageDraw, ImageFont
 # width – The line width, in pixels.
 
 # This is a begin experiment comment in the code section of the readymessage section
-happyErrors = 3
-sadErrors = 2
-angryErrors = 1
+happyErrors = 6
+sadErrors = 6
+angryErrors = 6
 fearfulErrors = 4
-skippedErrors = 3
+skippedErrors = 2
 
 misattributedHappySad = 0
 misattributedHappyAngry = 0
@@ -39,7 +39,7 @@ misattributedFearfulAngry = 0
 
 total = 24
 
-widthmain = 480
+widthmain = 540
 heightmain = 30
 widthmisattributions = 300
 heightmisattributions = 18
@@ -94,7 +94,4 @@ fearfulErrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=N
 skippedErrorsrectangle.rectangle(skippedrectangle, fill =skippedcolor, outline=None)
 
 totalErrorsgraph.show()
-
-
-# img  = Image.new( mode = "RGB", size = (width, height),color = (255,255,255) )
-# ImageDraw.rectangle((0,10),(100,100), fill= "#ffffff", outline=None, width=1)
+totalErrorsgraph.save("totalErrorsgraph.jpg")
