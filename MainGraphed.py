@@ -202,7 +202,7 @@ slider = visual.Slider(win=win, name='slider',
     labels=["HAPPY", "SAD", "ANGRY", "FEARFUL"], ticks=(1, 2, 3, 4), granularity=1,
     style=['rating'], styleTweaks=[], opacity=1,
     labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
-    font='HelveticaBold', labelHeight=0.05,
+    font='Arial', labelHeight=0.05,
     flip=False, ori=0, depth=-1, readOnly=False)
 next_button = visual.TextStim(win=win, name='next_button',
     text='CONTINUE',
@@ -699,8 +699,8 @@ data_dict.update(expInfo)
 data_dict.update(incorrectAnswers)
 data_dict.update(correctAnswers)
 
-fillpdfs.write_fillable_pdf('blank2.pdf', 'completed.pdf', data_dict, flatten=False)
-os.startfile('completed.pdf')
+
+
 # "this is an end experiment comment
 
 # Flip one final time so any remaining win.callOnFlip() 
@@ -711,31 +711,32 @@ win.flip()
 thisExp.saveAsWideText(filename+'.csv', delim='auto')
 thisExp.saveAsPickle(filename)
 
+happycolor = "#00FF00"
+sadcolor = "#0000FF"
+angrycolor = "#FF0000"
+fearfulcolor = "#FFFF00"
+
 widthmain = 480
 heightmain = 30
 widthmisattributions = 300
 heightmisattributions = 18
-happyerrors = 2
-saderrors = 2
-angryerrors = 2
-fearfulerrors = 2
-w, h = 480, 30
 totalerrorsincrement = widthmain/24
 
 widthmisattributions = 300
 heightmisattributions = 18
 errorsincrementmisattribute = 300/18
+misattributionerrorsincrement = widthmisattributions/18
 
 shape = [(0, 0), (widthmain, heightmain)]
 
 happystartx = 0
-happyendx = totalerrorsincrement * happyerrors 
+happyendx = (happyErrors * totalerrorsincrement)
 sadstartx = happyendx
-sadendx = sadstartx + (saderrors*totalerrorsincrement)
+sadendx = sadstartx + (sadErrors * totalerrorsincrement)
 angrystartx = sadendx
-angryendx = angrystartx + (angryerrors*totalerrorsincrement)
+angryendx = angrystartx + (angryErrors * totalerrorsincrement)
 fearfulstartx = angryendx
-fearfulendx = fearfulstartx + (fearfulerrors*totalerrorsincrement)
+fearfulendx = fearfulstartx + (fearfulErrors * totalerrorsincrement)
 
 happyrectangle = [(0, 0), (happyendx , heightmain)]
 sadrectangle = [(sadstartx,0),(sadendx,heightmain) ]
@@ -745,11 +746,7 @@ fearfulrectangle = [(fearfulstartx,0), (fearfulendx,heightmain)]
 # creating new Image object
 totalerrorsgraph = Image.new("RGB", (widthmain, heightmain),color = "#FFFFFF")
 
-happycolor = "#00FF00"
-sadcolor = "#0000FF"
-angrycolor = "#FF0000"
-fearfulcolor = "#FFFF00"
-skippedcolor = "#666666"
+
 
 
 # create rectangle image for happy errors
@@ -764,18 +761,18 @@ angryerrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 fearfulerrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
 totalerrorsgraph.show()
-totalerrorsgraph.save("totalerrorgraph")
+totalerrorsgraph.save("totalerrorgraph.jpg")
 
 #create picture for happy misattributions
 
 happystartx = 0
 happyendx = (0) # only since we're on the happy misattributions graph
 sadstartx = happyendx
-sadendx = sadstartx + (misattributedHappySad*misattributionerrorsincrement)
+sadendx = sadstartx + (misattributedHappySad * misattributionerrorsincrement)
 angrystartx = sadendx
-angryendx = angrystartx + (misattributedHappyAngry*misattributionerrorsincrement)
+angryendx = angrystartx + (misattributedHappyAngry * misattributionerrorsincrement)
 fearfulstartx = angryendx
-fearfulendx = fearfulstartx + (misattributedHappyFearful*misattributionerrorsincrement)
+fearfulendx = fearfulstartx + (misattributedHappyFearful * misattributionerrorsincrement)
 
 happyrectangle = [(0, 0), (happyendx , heightmisattributions)]
 sadrectangle = [(sadstartx,0),(sadendx,heightmisattributions) ]
@@ -873,7 +870,7 @@ angryrectangle = [(angrystartx,0), (angryendx, heightmisattributions)]
 fearfulrectangle = [(fearfulstartx,0), (fearfulendx,heightmisattributions)]
 
 
-  # creating new Image object
+# creating new Image object
 fearfulMisattributionsGraph = Image.new("RGB", (widthmisattributions, heightmisattributions),color = "#FFFFFF")
 
 # create rectangle image for happy Errors
@@ -887,6 +884,24 @@ angryErrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 
 fearfulMisattributionsGraph.show()
 fearfulMisattributionsGraph.save("fearfulMisattributions.jpg")
+
+# data_dict
+# Now let's insert the images
+
+fillpdfs.place_image('totalerrorsgraph.jpg', 0, 540, 'blank2.pdf', 'completed.pdf', 1, width=700, height=200)
+
+
+#The following are for the other graphs
+fillpdfs.place_image('happyMisattributions.jpg', 95, 32, 'completed.pdf', 'completed1.pdf', 2, width=400, height=200)
+fillpdfs.place_image('sadMisattributions.jpg', 95, 20, 'completed1.pdf', 'completed2.pdf', 2, width=400, height=200)
+fillpdfs.place_image('angryMisattributions.jpg', 95, -50, 'completed2.pdf', 'completed3.pdf', 2, width=400, height=200)
+fillpdfs.place_image('fearfulMisattributions.jpg', 100, -18, 'completed3.pdf', 'completed4.pdf', 2, width=500, height=50) 
+# os.startfile('completed4.pdf')
+
+fillpdfs.write_fillable_pdf('completed4.pdf', 'completed5.pdf', data_dict, flatten=False)
+os.startfile('completed5.pdf')
+
+
 
 logging.flush()
 # make sure everything is closed down

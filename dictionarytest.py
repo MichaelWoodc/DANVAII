@@ -1,11 +1,5 @@
-import os
-import fillpdf
-from fillpdf import fillpdfs
-
-fillpdfs.get_form_fields("blank2.pdf", sort=False, page_number=None)
-
-dictionary = {'danvasubtest': '',
-'participant': '',
+dictionary = {"danvasubtest": "",
+"participant": '',
 'age': '',
 'happyHighIntensityErrors': '',
 'sadHighIntensityErrors': '',
@@ -116,3 +110,5 @@ dictionary = {'danvasubtest': '',
 'totalErrors': '',
 'correctAnswer0': '',
 'incorrectAnswer0': ''}
+a = 1
+#stop here
