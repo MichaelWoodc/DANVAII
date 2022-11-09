@@ -1,5 +1,7 @@
 import os, sys
 from PIL import Image, ImageDraw, ImageFont
+import fillpdf
+from fillpdf import fillpdfs
 
 
 
@@ -20,10 +22,10 @@ from PIL import Image, ImageDraw, ImageFont
 # This is a begin experiment comment in the code section of the readymessage section
 
 
-happyErrors = 0
-sadErrors = 0
-angryErrors = 0
-fearfulErrors = 0
+happyErrors = 6
+sadErrors = 6
+angryErrors = 6
+fearfulErrors = 6
 
 misattributedHappySad = 3
 misattributedHappyAngry = 3
@@ -41,19 +43,6 @@ misattributedFearfulSad = 3
 misattributedFearfulAngry = 2
 total = 24
 
-# Let's define colors before creating images
-happycolor = "#00FF00"
-sadcolor = "#0000FF"
-angrycolor = "#FF0000"
-fearfulcolor = "#FFFF00"
-skippedcolor = "#666666"
-
-
-
-widthmisattributions = 350
-heightmisattributions = 16
-misattributionerrorsincrement = widthmisattributions/18
-shape = [(0, 0), (widthmisattributions, heightmisattributions)]
 
 widthmain = 480
 heightmain = 30
@@ -67,6 +56,7 @@ errorsincrementmisattribute = 300/18
 misattributionerrorsincrement = widthmisattributions/18
 
 shape = [(0, 0), (widthmain, heightmain)]
+
 
 happystartx = 0
 happyendx = (happyErrors * totalerrorsincrement)
@@ -85,7 +75,10 @@ fearfulrectangle = [(fearfulstartx,0), (fearfulendx,heightmain)]
 # creating new Image object
 totalerrorsgraph = Image.new("RGB", (widthmain, heightmain),color = "#FFFFFF")
 
-
+happycolor = "#00FF00"
+sadcolor = "#0000FF"
+angrycolor = "#FF0000"
+fearfulcolor = "#FFFF00"
 
 
 # create rectangle image for happy errors
@@ -99,41 +92,7 @@ saderrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
 angryerrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 fearfulerrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
-totalerrorsgraph.show()
-totalerrorsgraph.save("totalerrorgraph.jpg")
+totalerrorsgraph.save("totalerrorsgraph.jpg")
 
 
-happystartx = 0
-happyendx = happystartx + (misattributedAngryHappy * misattributionerrorsincrement) 
-sadstartx = happyendx
-sadendx = sadstartx + (misattributedAngrySad * misattributionerrorsincrement)
-angrystartx = sadendx
-angryendx = angrystartx # only since we're on the Angry misattributions graph
-fearfulstartx = angryendx
-fearfulendx = fearfulstartx + (misattributedAngryFearful * misattributionerrorsincrement)
-
-happyrectangle = [(0, 0), (happyendx , heightmisattributions)]
-sadrectangle = [(sadstartx,0),(sadendx,heightmisattributions) ]
-fearfulrectangle = [(fearfulstartx,0), (fearfulendx,heightmisattributions)]
-
-
-  # creating new Image object
-angryMisattributionsGraph = Image.new("RGB", (widthmisattributions, heightmisattributions),color = "#FFFFFF")
-
-# create rectangle image for happy Errors
-happyErrorsrectangle = ImageDraw.Draw(angryMisattributionsGraph)
-sadErrorsrectangle = ImageDraw.Draw(angryMisattributionsGraph)
-fearfulErrorsrectangle = ImageDraw.Draw(angryMisattributionsGraph)
-
-happyErrorsrectangle.rectangle(happyrectangle, fill =happycolor, outline=None)
-sadErrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
-fearfulErrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
-
-angryMisattributionsGraph.show()
-angryMisattributionsGraph.save("angryMisattributions.jpg")
-
-fillpdfs.place_image('fearfulMisattributions.jpg', 100, -18, 'completed3.pdf', 'completed4.pdf', 2, width=500, height=50) 
-# os.startfile('completed4.pdf')
-
-fillpdfs.write_fillable_pdf('completed4.pdf', 'completed5.pdf', data_dict, flatten=False)
-os.startfile('completed5.pdf')
+fillpdfs.place_image('totalerrorsgraph.jpg', 67, 84, 'main graphed.pdf', 'main graph test.pdf', 1, width=477, height=160)
