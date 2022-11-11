@@ -1,39 +1,11 @@
 import os, sys
 from PIL import Image, ImageDraw, ImageFont
+import fillpdf
+from fillpdf import fillpdfs
 
-
-
-
-# Draws a rounded rectangle.
-
-# PARAMETERS:
-# xy – Two points to define the bounding box. Sequence of either [(x0, y0), (x1, y1)] or [x0, y0, x1, y1]. The second point is just outside the drawn rectangle.
-
-# radius – Radius of the corners.
-
-# outline – Color to use for the outline.
-
-# fill – Color to use for the fill.
-
-# width – The line width, in pixels.
-
-# This is a begin experiment comment in the code section of the readymessage section
-
-misattributedHappySad = 3
-misattributedHappyAngry = 3
-misattributedHappyFearful = 3
-misattributedHappySkipped = 6
-
-misattributedSadHappy = 1
-misattributedSadAngry = 1
-misattributedSadFearful = 1
-misattributedAngryHappy = 1
-misattributedAngrySad = 1
-misattributedAngryFearful = 1
-misattributedFearfulHappy = 1
-misattributedFearfulSad = 1
-misattributedFearfulAngry = 1
-total = 24
+misattributedSadHappy = 6
+misattributedSadAngry = 6
+misattributedSadFearful = 6
 
 # Let's define colors before creating images
 happycolor = "#00FF00"
@@ -73,5 +45,7 @@ happyErrorsrectangle.rectangle(happyrectangle, fill =happycolor, outline=None)
 angryErrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 fearfulErrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
-sadMisattributionsGraph.show()
+# sadMisattributionsGraph.show()
 sadMisattributionsGraph.save("sadMisattributions.jpg")
+
+fillpdfs.place_image('sadMisattributions.jpg', 209, 544, '1happymisattributions.pdf', '2sadmisattributionstest.pdf', 1, width=283.5, height=15)

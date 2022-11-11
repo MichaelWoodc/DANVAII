@@ -556,7 +556,7 @@ for i in currentLoop.trialList :
             maleTotalErrors = maleTotalErrors + 1
         elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
             femaleTotalErrors = femaleTotalErrors + 1
-        else: 
+        else:
             pass
         
         
