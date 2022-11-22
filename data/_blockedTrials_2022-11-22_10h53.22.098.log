@@ -1,0 +1,357 @@
+2.5954 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.0731 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [1440, 900]. Using actual size
+11.3071 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-0.396, -0.396, -0.396]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001939F741CD0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001939D0E7460>, multiSample=False, name='window1', numSamples=2, pos=(1372, -900), screen=1, size=array([1440,  900]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.3075 	EXP 	window1: mouseVisible = True
+11.3075 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+11.3075 	EXP 	window1: recordFrameIntervals = False
+11.4735 	EXP 	window1: recordFrameIntervals = True
+11.6569 	EXP 	Screen (1) actual frame rate measured at 59.97Hz
+11.6570 	EXP 	window1: recordFrameIntervals = False
+15.3417 	EXP 	Created Instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='Instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+15.3419 	EXP 	window1: mouseVisible = True
+15.3467 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.6936, 0.4704]), texRes=128, units='height', win=Window(...))
+15.3725 	EXP 	window1: mouseVisible = True
+15.5128 	EXP 	Created slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=0.05, labelWrapWidth=None, labels=['HAPPY', 'SAD', 'ANGRY', 'FEARFUL'], lineColor=None, markerColor=None, name='slider', opacity=None, ori=0, pos=array([ 0. , -0.6]), readOnly=False, self=UNKNOWN, size=array([1. , 0.1]), startValue=None, style=['rating'], styleTweaks=[], ticks=array([1, 2, 3, 4]), units='norm', win=Window(...))
+15.5223 	EXP 	Created next_button = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='next_button', opacity=1.0, ori=0, pos=array([ 0.7, -0.6]), rgb=UNKNOWN, text='CONTINUE', units='norm', win=Window(...), wrapWidth=1)
+15.5224 	EXP 	window1: mouseVisible = True
+15.5438 	EXP 	slider: autoLog = True
+15.5438 	EXP 	slider: markerPos = None
+15.5438 	EXP 	slider: styleTweaks = []
+15.5438 	EXP 	slider: styleTweaks = []
+15.5438 	EXP 	slider: styleTweaks = []
+15.5438 	EXP 	slider: styleTweaks = []
+15.5438 	EXP 	slider: contrast = 1.0
+15.5438 	EXP 	slider: autoLog = True
+15.5438 	EXP 	Instructions: autoDraw = True
+15.8451 	DATA 	Mouse: Left button down, pos=(405,183)
+15.8511 	EXP 	Imported facesBlock.csv as conditions, 24 conditions, 4 params
+15.8516 	EXP 	Created sequence: sequential, trialTypes=24, nReps=1, seed=None
+15.8519 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims\\IMG_0001.jpg'), ('correctAnswer', 1), ('intensity', 2), ('stimuliGender', 1)])
+15.9386 	DATA 	Mouse:  Left button up, pos=(405,183)
+15.9441 	EXP 	Instructions: autoDraw = False
+15.9441 	EXP 	image: image = 'stims\\IMG_0001.jpg'
+15.9441 	EXP 	slider: markerPos = None
+15.9441 	EXP 	slider: markerPos = None
+15.9441 	EXP 	slider: autoDraw = True
+15.9441 	EXP 	next_button: autoDraw = True
+15.9441 	EXP 	slider: markerPos = 1.1875
+15.9774 	EXP 	slider: markerPos = 1
+16.0277 	EXP 	image: autoDraw = True
+16.4952 	DATA 	Mouse: Left button down, pos=(580,185)
+16.5281 	EXP 	slider: markerPos = 1.9166666666666667
+16.5614 	EXP 	slider: markerPos = 1.9208333333333334
+16.5946 	EXP 	slider: markerPos = 1.925
+16.5953 	DATA 	Mouse:  Left button up, pos=(582,185)
+16.6283 	EXP 	slider: markerPos = 2
+17.1570 	DATA 	Mouse: Left button down, pos=(1175,179)
+17.1687 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims\\IMG_0002.jpg'), ('correctAnswer', 4), ('intensity', 1), ('stimuliGender', 1)])
+17.2270 	DATA 	Mouse:  Left button up, pos=(1175,180)
+17.2453 	EXP 	image: autoDraw = False
+17.2453 	EXP 	slider: autoDraw = False
+17.2453 	EXP 	next_button: autoDraw = False
+17.2453 	EXP 	image: image = 'stims\\IMG_0002.jpg'
+17.2453 	EXP 	slider: markerPos = None
+17.2453 	EXP 	slider: markerPos = None
+17.2453 	EXP 	slider: autoDraw = True
+17.2453 	EXP 	next_button: autoDraw = True
+17.3288 	EXP 	image: autoDraw = True
+17.6737 	DATA 	Mouse: Left button down, pos=(1084,182)
+17.7125 	EXP 	slider: markerPos = 4.016666666666667
+17.7459 	EXP 	slider: markerPos = 4.016666666666667
+17.7466 	DATA 	Mouse:  Left button up, pos=(1084,181)
+17.7792 	EXP 	slider: markerPos = 4
+17.9466 	DATA 	Mouse: Left button down, pos=(1165,180)
+17.9525 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims\\IMG_0003.jpg'), ('correctAnswer', 3), ('intensity', 2), ('stimuliGender', 1)])
+18.0201 	DATA 	Mouse:  Left button up, pos=(1166,180)
+18.0294 	EXP 	image: autoDraw = False
+18.0294 	EXP 	slider: autoDraw = False
+18.0294 	EXP 	next_button: autoDraw = False
+18.0294 	EXP 	image: image = 'stims\\IMG_0003.jpg'
+18.0294 	EXP 	slider: markerPos = None
+18.0294 	EXP 	slider: markerPos = None
+18.0294 	EXP 	slider: autoDraw = True
+18.0294 	EXP 	next_button: autoDraw = True
+18.1129 	EXP 	image: autoDraw = True
+18.9145 	DATA 	Mouse: Left button down, pos=(864,175)
+18.9472 	EXP 	slider: markerPos = 3.0999999999999996
+18.9636 	DATA 	Mouse:  Left button up, pos=(864,175)
+18.9803 	EXP 	slider: markerPos = 3.0999999999999996
+19.0140 	EXP 	slider: markerPos = 3
+19.3813 	DATA 	Mouse: Left button down, pos=(594,163)
+19.4141 	EXP 	slider: markerPos = 1.975
+19.4475 	EXP 	slider: markerPos = 1.975
+19.4631 	DATA 	Mouse:  Left button up, pos=(594,163)
+19.4809 	EXP 	slider: markerPos = 1.975
+19.5142 	EXP 	slider: markerPos = 2
+19.7918 	DATA 	Mouse: Left button down, pos=(1143,196)
+19.8037 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims\\IMG_0004.jpg'), ('correctAnswer', 1), ('intensity', 1), ('stimuliGender', 1)])
+19.9669 	DATA 	Mouse:  Left button up, pos=(1143,196)
+19.9813 	EXP 	image: autoDraw = False
+19.9813 	EXP 	slider: autoDraw = False
+19.9813 	EXP 	next_button: autoDraw = False
+19.9813 	EXP 	image: image = 'stims\\IMG_0004.jpg'
+19.9813 	EXP 	slider: markerPos = None
+19.9813 	EXP 	slider: markerPos = None
+19.9813 	EXP 	slider: autoDraw = True
+19.9813 	EXP 	next_button: autoDraw = True
+20.2316 	EXP 	image: autoDraw = True
+21.1842 	DATA 	Mouse: Left button down, pos=(604,179)
+21.2158 	EXP 	slider: markerPos = 2.0166666666666666
+21.2494 	EXP 	slider: markerPos = 2.0166666666666666
+21.2502 	DATA 	Mouse:  Left button up, pos=(604,179)
+21.2825 	EXP 	slider: markerPos = 2
+22.2334 	EXP 	image: autoDraw = False
+22.4008 	DATA 	Mouse: Left button down, pos=(1081,185)
+22.4336 	EXP 	slider: markerPos = 4.004166666666666
+22.4672 	EXP 	slider: markerPos = 4.004166666666666
+22.4680 	DATA 	Mouse:  Left button up, pos=(1081,185)
+22.5004 	EXP 	slider: markerPos = 4
+22.6787 	DATA 	Mouse: Left button down, pos=(1151,183)
+22.6899 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims\\IMG_0005.jpg'), ('correctAnswer', 3), ('intensity', 1), ('stimuliGender', 1)])
+22.7573 	DATA 	Mouse:  Left button up, pos=(1151,183)
+22.7672 	EXP 	image: autoDraw = False
+22.7672 	EXP 	slider: autoDraw = False
+22.7672 	EXP 	next_button: autoDraw = False
+22.7672 	EXP 	image: image = 'stims\\IMG_0005.jpg'
+22.7672 	EXP 	slider: markerPos = None
+22.7672 	EXP 	slider: markerPos = None
+22.7672 	EXP 	slider: autoDraw = True
+22.7672 	EXP 	next_button: autoDraw = True
+22.9174 	EXP 	image: autoDraw = True
+23.6190 	DATA 	Mouse: Left button down, pos=(415,186)
+23.6516 	EXP 	slider: markerPos = 1.2291666666666667
+23.6800 	DATA 	Mouse:  Left button up, pos=(415,186)
+23.6851 	EXP 	slider: markerPos = 1.2291666666666667
+23.7183 	EXP 	slider: markerPos = 1
+24.3027 	DATA 	Mouse: Left button down, pos=(1170,178)
+24.3087 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims\\IMG_0006.jpg'), ('correctAnswer', 2), ('intensity', 2), ('stimuliGender', 1)])
+24.4704 	DATA 	Mouse:  Left button up, pos=(1170,179)
+24.4856 	EXP 	image: autoDraw = False
+24.4856 	EXP 	slider: autoDraw = False
+24.4856 	EXP 	next_button: autoDraw = False
+24.4856 	EXP 	image: image = 'stims\\IMG_0006.jpg'
+24.4856 	EXP 	slider: markerPos = None
+24.4856 	EXP 	slider: markerPos = None
+24.4856 	EXP 	slider: autoDraw = True
+24.4856 	EXP 	next_button: autoDraw = True
+24.6189 	EXP 	image: autoDraw = True
+24.7480 	DATA 	Mouse: Left button down, pos=(1186,191)
+24.7587 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims\\IMG_0007.jpg'), ('correctAnswer', 1), ('intensity', 1), ('stimuliGender', 1)])
+24.8160 	DATA 	Mouse:  Left button up, pos=(1186,191)
+24.8359 	EXP 	image: autoDraw = False
+24.8359 	EXP 	slider: autoDraw = False
+24.8359 	EXP 	next_button: autoDraw = False
+24.8359 	EXP 	image: image = 'stims\\IMG_0007.jpg'
+24.8359 	EXP 	slider: markerPos = None
+24.8359 	EXP 	slider: markerPos = None
+24.8359 	EXP 	slider: autoDraw = True
+24.8359 	EXP 	next_button: autoDraw = True
+24.9677 	DATA 	Mouse: Left button down, pos=(1186,192)
+24.9861 	EXP 	image: autoDraw = True
+24.9869 	DATA 	Mouse:  Left button up, pos=(1186,193)
+25.0868 	DATA 	Mouse: Left button down, pos=(1186,193)
+25.0932 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims\\IMG_0008.jpg'), ('correctAnswer', 4), ('intensity', 1), ('stimuliGender', 1)])
+25.1634 	DATA 	Mouse:  Left button up, pos=(1186,193)
+25.1698 	EXP 	image: autoDraw = False
+25.1698 	EXP 	slider: autoDraw = False
+25.1698 	EXP 	next_button: autoDraw = False
+25.1698 	EXP 	image: image = 'stims\\IMG_0008.jpg'
+25.1698 	EXP 	slider: markerPos = None
+25.1698 	EXP 	slider: markerPos = None
+25.1698 	EXP 	slider: autoDraw = True
+25.1698 	EXP 	next_button: autoDraw = True
+25.2529 	EXP 	image: autoDraw = True
+25.2633 	DATA 	Mouse: Left button down, pos=(1186,193)
+25.2760 	EXP 	New trial (rep=0, index=8): OrderedDict([('stimFile', 'stims\\IMG_0009.jpg'), ('correctAnswer', 4), ('intensity', 2), ('stimuliGender', 1)])
+25.3531 	EXP 	image: autoDraw = False
+25.3531 	EXP 	slider: autoDraw = False
+25.3531 	EXP 	next_button: autoDraw = False
+25.3531 	EXP 	image: image = 'stims\\IMG_0009.jpg'
+25.3531 	EXP 	slider: markerPos = None
+25.3531 	EXP 	slider: markerPos = None
+25.3531 	EXP 	slider: autoDraw = True
+25.3531 	EXP 	next_button: autoDraw = True
+25.3636 	DATA 	Mouse:  Left button up, pos=(1186,193)
+25.4365 	EXP 	image: autoDraw = True
+25.4807 	DATA 	Mouse: Left button down, pos=(1186,193)
+25.4927 	EXP 	New trial (rep=0, index=9): OrderedDict([('stimFile', 'stims\\IMG_0010.jpg'), ('correctAnswer', 1), ('intensity', 1), ('stimuliGender', 1)])
+25.5699 	EXP 	image: autoDraw = False
+25.5699 	EXP 	slider: autoDraw = False
+25.5699 	EXP 	next_button: autoDraw = False
+25.5699 	EXP 	image: image = 'stims\\IMG_0010.jpg'
+25.5699 	EXP 	slider: markerPos = None
+25.5699 	EXP 	slider: markerPos = None
+25.5699 	EXP 	slider: autoDraw = True
+25.5699 	EXP 	next_button: autoDraw = True
+25.5972 	DATA 	Mouse:  Left button up, pos=(1186,193)
+25.6532 	EXP 	image: autoDraw = True
+25.7038 	DATA 	Mouse: Left button down, pos=(1186,193)
+25.7099 	EXP 	New trial (rep=0, index=10): OrderedDict([('stimFile', 'stims\\IMG_0011.jpg'), ('correctAnswer', 2), ('intensity', 2), ('stimuliGender', 1)])
+25.7868 	EXP 	image: autoDraw = False
+25.7868 	EXP 	slider: autoDraw = False
+25.7868 	EXP 	next_button: autoDraw = False
+25.7868 	EXP 	image: image = 'stims\\IMG_0011.jpg'
+25.7868 	EXP 	slider: markerPos = None
+25.7868 	EXP 	slider: markerPos = None
+25.7868 	EXP 	slider: autoDraw = True
+25.7868 	EXP 	next_button: autoDraw = True
+25.8138 	DATA 	Mouse:  Left button up, pos=(1186,193)
+25.8535 	EXP 	image: autoDraw = True
+25.9307 	DATA 	Mouse: Left button down, pos=(1186,193)
+25.9430 	EXP 	New trial (rep=0, index=11): OrderedDict([('stimFile', 'stims\\IMG_0012.jpg'), ('correctAnswer', 3), ('intensity', 1), ('stimuliGender', 1)])
+26.0204 	EXP 	image: autoDraw = False
+26.0204 	EXP 	slider: autoDraw = False
+26.0204 	EXP 	next_button: autoDraw = False
+26.0204 	EXP 	image: image = 'stims\\IMG_0012.jpg'
+26.0204 	EXP 	slider: markerPos = None
+26.0204 	EXP 	slider: markerPos = None
+26.0204 	EXP 	slider: autoDraw = True
+26.0204 	EXP 	next_button: autoDraw = True
+26.0210 	DATA 	Mouse:  Left button up, pos=(1186,193)
+26.0871 	EXP 	image: autoDraw = True
+26.1315 	DATA 	Mouse: Left button down, pos=(1186,193)
+26.1439 	EXP 	New trial (rep=0, index=12): OrderedDict([('stimFile', 'stims\\IMG_0013.jpg'), ('correctAnswer', 2), ('intensity', 1), ('stimuliGender', 2)])
+26.2375 	EXP 	image: autoDraw = False
+26.2375 	EXP 	slider: autoDraw = False
+26.2375 	EXP 	next_button: autoDraw = False
+26.2375 	EXP 	image: image = 'stims\\IMG_0013.jpg'
+26.2375 	EXP 	slider: markerPos = None
+26.2375 	EXP 	slider: markerPos = None
+26.2375 	EXP 	slider: autoDraw = True
+26.2375 	EXP 	next_button: autoDraw = True
+26.2525 	DATA 	Mouse:  Left button up, pos=(1186,193)
+26.3042 	EXP 	image: autoDraw = True
+26.3548 	DATA 	Mouse: Left button down, pos=(1186,193)
+26.3610 	EXP 	New trial (rep=0, index=13): OrderedDict([('stimFile', 'stims\\IMG_0014.jpg'), ('correctAnswer', 2), ('intensity', 1), ('stimuliGender', 2)])
+26.4375 	EXP 	image: autoDraw = False
+26.4375 	EXP 	slider: autoDraw = False
+26.4375 	EXP 	next_button: autoDraw = False
+26.4375 	EXP 	image: image = 'stims\\IMG_0014.jpg'
+26.4375 	EXP 	slider: markerPos = None
+26.4375 	EXP 	slider: markerPos = None
+26.4375 	EXP 	slider: autoDraw = True
+26.4375 	EXP 	next_button: autoDraw = True
+26.4655 	DATA 	Mouse:  Left button up, pos=(1186,193)
+26.5042 	EXP 	image: autoDraw = True
+26.5834 	DATA 	Mouse: Left button down, pos=(1186,193)
+26.5943 	EXP 	New trial (rep=0, index=14): OrderedDict([('stimFile', 'stims\\IMG_0015.jpg'), ('correctAnswer', 3), ('intensity', 2), ('stimuliGender', 2)])
+26.6711 	EXP 	image: autoDraw = False
+26.6711 	EXP 	slider: autoDraw = False
+26.6711 	EXP 	next_button: autoDraw = False
+26.6711 	EXP 	image: image = 'stims\\IMG_0015.jpg'
+26.6711 	EXP 	slider: markerPos = None
+26.6711 	EXP 	slider: markerPos = None
+26.6711 	EXP 	slider: autoDraw = True
+26.6711 	EXP 	next_button: autoDraw = True
+26.7059 	DATA 	Mouse:  Left button up, pos=(1186,193)
+26.7544 	EXP 	image: autoDraw = True
+26.8319 	DATA 	Mouse: Left button down, pos=(1186,193)
+26.8438 	EXP 	New trial (rep=0, index=15): OrderedDict([('stimFile', 'stims\\IMG_0016.jpg'), ('correctAnswer', 4), ('intensity', 1), ('stimuliGender', 2)])
+26.9213 	EXP 	image: autoDraw = False
+26.9213 	EXP 	slider: autoDraw = False
+26.9213 	EXP 	next_button: autoDraw = False
+26.9213 	EXP 	image: image = 'stims\\IMG_0016.jpg'
+26.9213 	EXP 	slider: markerPos = None
+26.9213 	EXP 	slider: markerPos = None
+26.9213 	EXP 	slider: autoDraw = True
+26.9213 	EXP 	next_button: autoDraw = True
+26.9651 	DATA 	Mouse:  Left button up, pos=(1186,193)
+27.0046 	EXP 	image: autoDraw = True
+27.0888 	DATA 	Mouse: Left button down, pos=(1186,193)
+27.0948 	EXP 	New trial (rep=0, index=16): OrderedDict([('stimFile', 'stims\\IMG_0017.jpg'), ('correctAnswer', 2), ('intensity', 1), ('stimuliGender', 2)])
+27.1717 	EXP 	image: autoDraw = False
+27.1717 	EXP 	slider: autoDraw = False
+27.1717 	EXP 	next_button: autoDraw = False
+27.1717 	EXP 	image: image = 'stims\\IMG_0017.jpg'
+27.1717 	EXP 	slider: markerPos = None
+27.1717 	EXP 	slider: markerPos = None
+27.1717 	EXP 	slider: autoDraw = True
+27.1717 	EXP 	next_button: autoDraw = True
+27.2002 	DATA 	Mouse:  Left button up, pos=(1186,194)
+27.2549 	EXP 	image: autoDraw = True
+27.3495 	DATA 	Mouse: Left button down, pos=(1186,194)
+27.3611 	EXP 	New trial (rep=0, index=17): OrderedDict([('stimFile', 'stims\\IMG_0018.jpg'), ('correctAnswer', 2), ('intensity', 2), ('stimuliGender', 2)])
+27.4384 	EXP 	image: autoDraw = False
+27.4384 	EXP 	slider: autoDraw = False
+27.4384 	EXP 	next_button: autoDraw = False
+27.4384 	EXP 	image: image = 'stims\\IMG_0018.jpg'
+27.4384 	EXP 	slider: markerPos = None
+27.4384 	EXP 	slider: markerPos = None
+27.4384 	EXP 	slider: autoDraw = True
+27.4384 	EXP 	next_button: autoDraw = True
+27.4654 	DATA 	Mouse:  Left button up, pos=(1186,194)
+27.5051 	EXP 	image: autoDraw = True
+27.6223 	DATA 	Mouse: Left button down, pos=(1186,194)
+27.6284 	EXP 	New trial (rep=0, index=18): OrderedDict([('stimFile', 'stims\\IMG_0019.jpg'), ('correctAnswer', 4), ('intensity', 2), ('stimuliGender', 2)])
+27.7221 	EXP 	image: autoDraw = False
+27.7221 	EXP 	slider: autoDraw = False
+27.7221 	EXP 	next_button: autoDraw = False
+27.7221 	EXP 	image: image = 'stims\\IMG_0019.jpg'
+27.7221 	EXP 	slider: markerPos = None
+27.7221 	EXP 	slider: markerPos = None
+27.7221 	EXP 	slider: autoDraw = True
+27.7221 	EXP 	next_button: autoDraw = True
+27.7561 	DATA 	Mouse:  Left button up, pos=(1186,194)
+27.7887 	EXP 	image: autoDraw = True
+27.8896 	DATA 	Mouse: Left button down, pos=(1186,194)
+27.8956 	EXP 	New trial (rep=0, index=19): OrderedDict([('stimFile', 'stims\\IMG_0020.jpg'), ('correctAnswer', 3), ('intensity', 1), ('stimuliGender', 2)])
+27.9723 	EXP 	image: autoDraw = False
+27.9723 	EXP 	slider: autoDraw = False
+27.9723 	EXP 	next_button: autoDraw = False
+27.9723 	EXP 	image: image = 'stims\\IMG_0020.jpg'
+27.9723 	EXP 	slider: markerPos = None
+27.9723 	EXP 	slider: markerPos = None
+27.9723 	EXP 	slider: autoDraw = True
+27.9723 	EXP 	next_button: autoDraw = True
+28.0350 	DATA 	Mouse:  Left button up, pos=(1186,194)
+28.0389 	EXP 	image: autoDraw = True
+28.1740 	DATA 	Mouse: Left button down, pos=(1186,194)
+28.1955 	EXP 	New trial (rep=0, index=20): OrderedDict([('stimFile', 'stims\\IMG_0021.jpg'), ('correctAnswer', 4), ('intensity', 2), ('stimuliGender', 2)])
+28.2726 	EXP 	image: autoDraw = False
+28.2726 	EXP 	slider: autoDraw = False
+28.2726 	EXP 	next_button: autoDraw = False
+28.2726 	EXP 	image: image = 'stims\\IMG_0021.jpg'
+28.2726 	EXP 	slider: markerPos = None
+28.2726 	EXP 	slider: markerPos = None
+28.2726 	EXP 	slider: autoDraw = True
+28.2726 	EXP 	next_button: autoDraw = True
+28.3264 	DATA 	Mouse:  Left button up, pos=(1186,194)
+28.3562 	EXP 	image: autoDraw = True
+28.5067 	DATA 	Mouse: Left button down, pos=(1186,194)
+28.5161 	EXP 	New trial (rep=0, index=21): OrderedDict([('stimFile', 'stims\\IMG_0022.jpg'), ('correctAnswer', 3), ('intensity', 2), ('stimuliGender', 2)])
+28.6062 	EXP 	image: autoDraw = False
+28.6062 	EXP 	slider: autoDraw = False
+28.6062 	EXP 	next_button: autoDraw = False
+28.6062 	EXP 	image: image = 'stims\\IMG_0022.jpg'
+28.6062 	EXP 	slider: markerPos = None
+28.6062 	EXP 	slider: markerPos = None
+28.6062 	EXP 	slider: autoDraw = True
+28.6062 	EXP 	next_button: autoDraw = True
+28.6569 	DATA 	Mouse:  Left button up, pos=(1186,194)
+28.7063 	EXP 	image: autoDraw = True
+28.8022 	DATA 	Mouse: Left button down, pos=(1186,194)
+28.8130 	EXP 	New trial (rep=0, index=22): OrderedDict([('stimFile', 'stims\\IMG_0023.jpg'), ('correctAnswer', 1), ('intensity', 2), ('stimuliGender', 2)])
+28.8898 	EXP 	image: autoDraw = False
+28.8898 	EXP 	slider: autoDraw = False
+28.8898 	EXP 	next_button: autoDraw = False
+28.8898 	EXP 	image: image = 'stims\\IMG_0023.jpg'
+28.8898 	EXP 	slider: markerPos = None
+28.8898 	EXP 	slider: markerPos = None
+28.8898 	EXP 	slider: autoDraw = True
+28.8898 	EXP 	next_button: autoDraw = True
+28.9733 	EXP 	image: autoDraw = True
+28.9740 	DATA 	Mouse:  Left button up, pos=(1186,194)
+29.1177 	DATA 	Mouse: Left button down, pos=(1186,194)
+29.1295 	EXP 	New trial (rep=0, index=23): OrderedDict([('stimFile', 'stims\\IMG_0024.jpg'), ('correctAnswer', 1), ('intensity', 2), ('stimuliGender', 2)])
+29.2068 	EXP 	image: autoDraw = False
+29.2068 	EXP 	slider: autoDraw = False
+29.2068 	EXP 	next_button: autoDraw = False
+29.2068 	EXP 	image: image = 'stims\\IMG_0024.jpg'
+29.2068 	EXP 	slider: markerPos = None
+29.2068 	EXP 	slider: markerPos = None
+29.2068 	EXP 	slider: autoDraw = True
+29.2068 	EXP 	next_button: autoDraw = True
+29.2573 	DATA 	Mouse:  Left button up, pos=(1186,194)
+29.2901 	EXP 	image: autoDraw = True
+29.7254 	DATA 	Mouse: Left button down, pos=(1186,194)
+30.1737 	EXP 	window1: mouseVisible = True

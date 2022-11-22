@@ -95,4 +95,4 @@ fearfulerrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=N
 totalerrorsgraph.save("totalerrorsgraph.jpg")
 
 
-fillpdfs.place_image('totalerrorsgraph.jpg', 67, 84, 'main graphed.pdf', 'main graph test.pdf', 1, width=477, height=160)
+fillpdfs.place_image('totalerrorsgraph.jpg', 67, 84, 'blankDocument.pdf', 'tests\maingraphtest.pdf', 1, width=477, height=160)

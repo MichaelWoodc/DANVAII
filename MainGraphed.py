@@ -1,3 +1,4 @@
+# works as of november 22, 2022
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.1.3),
@@ -110,7 +111,8 @@ dictionarydefinitions = ["skippedErrors","totalErrors","totalerrors","happyHighI
                          "misattributedAngryFearful","misattributedFearfulHappy","misattributedFearfulSad",
                          "misattributedFearfulAngry","errorsByMisjudgement","danvasubtest","maleHappyErrors",
                          "maleSadErrors","maleAngryErrors","maleFearfulErrors","maleTotalErrors",
-                         "femaleHappyErrors","femaleSadErrors","femaleAngryErrors","femaleFearfulErrors","femaleTotalErrors",]
+                         "femaleHappyErrors","femaleSadErrors","femaleAngryErrors","femaleFearfulErrors","femaleTotalErrors",
+                         "totalErrors1","totalErrors2","happyErrors2","sadErrors2","angryErrors2","fearfulErrors2",]
 # this is a comment "before experiment"
 
 
@@ -687,6 +689,13 @@ for i in currentLoop.trialList :
 totalerrors = totalErrors
 errorsByMisjudgement = totalErrors - skippedErrors
 
+totalErrors1 = totalerrors
+totalErrors2 = totalerrors
+happyErrors2 = happyErrors
+sadErrors2 = sadErrors
+angryErrors2 = angryErrors
+fearfulErrors2 = fearfulErrors
+
 for i in (dictionarydefinitions):
     data_dict [dictionarydefinitions[dictionaryloop2]] = (eval(dictionarydefinitions[dictionaryloop2]))
     # I have no idea what I was doing with the below.  It should probably just go in the other section
@@ -711,21 +720,29 @@ win.flip()
 thisExp.saveAsWideText(filename+'.csv', delim='auto')
 thisExp.saveAsPickle(filename)
 
+
+
+
 happycolor = "#00FF00"
 sadcolor = "#0000FF"
 angrycolor = "#FF0000"
 fearfulcolor = "#FFFF00"
+malecolor = "#0000FF"
+femalecolor = "#FF0000"
 
 widthmain = 480
 heightmain = 30
-widthmisattributions = 300
-heightmisattributions = 18
+
 totalerrorsincrement = widthmain/24
 
-widthmisattributions = 300
-heightmisattributions = 18
-errorsincrementmisattribute = 300/18
+widthmisattributions = 378
+heightmisattributions = 20
+errorsincrementmisattribute = widthmisattributions/18
 misattributionerrorsincrement = widthmisattributions/18
+
+widthgendererrors = 378
+errorsincrementgender = widthgendererrors/24
+gendererrorsincrement = widthgendererrors/24
 
 shape = [(0, 0), (widthmain, heightmain)]
 
@@ -760,8 +777,8 @@ saderrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
 angryerrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 fearfulerrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
-totalerrorsgraph.show()
-totalerrorsgraph.save("totalerrorgraph.jpg")
+# totalerrorsgraph.show()
+totalerrorsgraph.save("graphPictures/totalerrorsgraph.jpg")
 
 #create picture for happy misattributions
 
@@ -793,8 +810,8 @@ sadErrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
 angryErrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 fearfulErrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
-happyMisattributionsGraph.show()
-happyMisattributionsGraph.save("happyMisattributions.jpg")
+# happyMisattributionsGraph.show()
+happyMisattributionsGraph.save("graphPictures/happyMisattributions.jpg")
 
 happystartx = 0
 happyendx = (misattributedSadHappy * misattributionerrorsincrement) 
@@ -822,8 +839,8 @@ happyErrorsrectangle.rectangle(happyrectangle, fill =happycolor, outline=None)
 angryErrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 fearfulErrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
-sadMisattributionsGraph.show()
-sadMisattributionsGraph.save("sadMisattributions.jpg")
+# sadMisattributionsGraph.show()
+sadMisattributionsGraph.save("graphPictures/sadMisattributions.jpg")
 
 happystartx = 0
 happyendx = happystartx + (misattributedAngryHappy * misattributionerrorsincrement) 
@@ -851,8 +868,8 @@ happyErrorsrectangle.rectangle(happyrectangle, fill =happycolor, outline=None)
 sadErrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
 fearfulErrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=None)
 
-angryMisattributionsGraph.show()
-angryMisattributionsGraph.save("angryMisattributions.jpg")
+# angryMisattributionsGraph.show()
+angryMisattributionsGraph.save("graphPictures/angryMisattributions.jpg")
 
 happystartx = 0
 happyendx = (misattributedFearfulHappy * misattributionerrorsincrement) 
@@ -882,24 +899,54 @@ happyErrorsrectangle.rectangle(happyrectangle, fill =happycolor, outline=None)
 sadErrorsrectangle.rectangle(sadrectangle, fill =sadcolor, outline=None)
 angryErrorsrectangle.rectangle(angryrectangle, fill =angrycolor, outline=None)
 
-fearfulMisattributionsGraph.show()
-fearfulMisattributionsGraph.save("fearfulMisattributions.jpg")
+# fearfulMisattributionsGraph.show()
+fearfulMisattributionsGraph.save("graphPictures/fearfulMisattributions.jpg")
+
+# Gender Errors Graph
+malestartx = 0
+maleendx = malestartx + (maleTotalErrors * errorsincrementgender) 
+femalestartx = maleendx
+femaleendx = femalestartx + (femaleTotalErrors * errorsincrementgender)
+
+malerectangle = [(0, 0), (maleendx , heightmisattributions)]
+femalerectangle = [(femalestartx,0),(femaleendx,heightmisattributions) ]
+
+# creating new Image object
+genderErrorsGraph = Image.new("RGB", (widthgendererrors, heightmisattributions),color = "#FFFFFF")
+
+# create rectangle image for happy Errors
+maleTotalErrorsrectangle = ImageDraw.Draw(genderErrorsGraph)
+femaleTotalErrorsrectangle = ImageDraw.Draw(genderErrorsGraph)
+
+
+maleTotalErrorsrectangle.rectangle(malerectangle, fill =malecolor, outline=None)
+femaleTotalErrorsrectangle.rectangle(femalerectangle, fill =femalecolor, outline=None)
+
+genderErrorsGraph.show()
+genderErrorsGraph.save("graphPictures/errorsbygender.jpg")
+
+
 
 # data_dict
 # Now let's insert the images
 
-fillpdfs.place_image('totalerrorsgraph.jpg', 0, 540, 'blank2.pdf', 'completed.pdf', 1, width=700, height=200)
+fillpdfs.place_image('graphPictures/totalerrorsgraph.jpg', 124, 769, 'blankDocumentNumberLine.pdf', 'pdfMagic/completed.pdf', 1, width=636, height=165)
 
+# These were the values before changing to the document with the number lines
+page2GraphStart = 120
+# page2GraphWidth = 283
+# page2GraphHeight = 15
 
+happygraphstarty = 161
 #The following are for the other graphs
-fillpdfs.place_image('happyMisattributions.jpg', 95, 32, 'completed.pdf', 'completed1.pdf', 2, width=400, height=200)
-fillpdfs.place_image('sadMisattributions.jpg', 95, 20, 'completed1.pdf', 'completed2.pdf', 2, width=400, height=200)
-fillpdfs.place_image('angryMisattributions.jpg', 95, -50, 'completed2.pdf', 'completed3.pdf', 2, width=400, height=200)
-fillpdfs.place_image('fearfulMisattributions.jpg', 100, -18, 'completed3.pdf', 'completed4.pdf', 2, width=500, height=50) 
-# os.startfile('completed4.pdf')
+fillpdfs.place_image('graphPictures/happyMisattributions.jpg', page2GraphStart, happygraphstarty, 'pdfMagic/completed.pdf', 'pdfMagic/completed1.pdf', 2, width=widthmisattributions, height=heightmisattributions)
+fillpdfs.place_image('graphPictures/sadMisattributions.jpg', page2GraphStart, happygraphstarty-43, 'pdfMagic/completed1.pdf', 'pdfMagic/completed2.pdf', 2, width=widthmisattributions, height=heightmisattributions)
+fillpdfs.place_image('graphPictures/angryMisattributions.jpg', page2GraphStart, happygraphstarty-85, 'pdfMagic/completed2.pdf', 'pdfMagic/completed3.pdf', 2, width=widthmisattributions, height=heightmisattributions)
+fillpdfs.place_image('graphPictures/fearfulMisattributions.jpg', page2GraphStart, happygraphstarty-126, 'pdfMagic/completed3.pdf', 'pdfMagic/completed4.pdf', 2, width=widthmisattributions, height=heightmisattributions)
+fillpdfs.place_image('graphPictures/errorsbygender.jpg',page2GraphStart, happygraphstarty-238, 'pdfMagic/completed4.pdf', 'pdfMagic/completed.pdf', 2, width=widthmisattributions, height=heightmisattributions)
 
-fillpdfs.write_fillable_pdf('completed4.pdf', 'completed5.pdf', data_dict, flatten=False)
-os.startfile('completed5.pdf')
+fillpdfs.write_fillable_pdf('pdfMagic/completed.pdf', 'completed.pdf', data_dict, flatten=False)
+os.startfile('completed.pdf')
 
 
 

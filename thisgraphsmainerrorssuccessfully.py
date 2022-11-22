@@ -46,16 +46,12 @@ total = 24
 
 widthmain = 480
 heightmain = 30
-widthmisattributions = 300
-heightmisattributions = 18
 totalerrorsincrement = widthmain/24
 
 widthmisattributions = 300
 heightmisattributions = 18
 errorsincrementmisattribute = 300/18
 misattributionerrorsincrement = widthmisattributions/18
-
-shape = [(0, 0), (widthmain, heightmain)]
 
 
 happystartx = 0
@@ -95,4 +91,4 @@ fearfulerrorsrectangle.rectangle(fearfulrectangle, fill =fearfulcolor, outline=N
 totalerrorsgraph.save("totalerrorsgraph.jpg")
 
 
-fillpdfs.place_image('totalerrorsgraph.jpg', 67, 84, 'main graphed.pdf', 'main graph test.pdf', 1, width=477, height=160)
+fillpdfs.place_image('totalerrorsgraph.jpg', 124, 769, 'blankDocumentNumberLine.pdf', 'maingraphtest.pdf', 1, width=636, height=165)

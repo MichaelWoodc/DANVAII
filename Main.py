@@ -42,7 +42,6 @@ data_dict = {}
 stimsList = {}
 correctAnswers = {}
 incorrectAnswers = {}
-errorList = []
 NamesCorrectAnswers = {}
 intensity = ''
 gender = ''
@@ -54,11 +53,15 @@ correctAnswerForString = ''
 # This is a begin experiment comment in the code section of the readymessage section
 highIntensityErrors = 0
 lowIntensityErrors = 0
-errorList = []
+
 skippedErrors = 0
 errorsByMisjudgement = 0
+
 totalErrors = 0
 totalerrors = 0
+totalErrors1 = 0
+totalErrors2 = 0
+
 happyHighIntensityErrors = 0
 happyLowIntensityErrors = 0
 sadHighIntensityErrors = 0
@@ -67,11 +70,16 @@ angryHighIntensityErrors = 0
 angryLowIntensityErrors = 0
 fearfulHighIntensityErrors = 0
 fearfulLowIntensityErrors = 0
+
 happyErrors = 0
+happyErrors2 = 0
 sadErrors = 0
+sadErrors2 = 0
 angryErrors = 0
+angryErrors2 = 0
 fearfulErrors = 0
-lowIntensityErrors = 0
+fearfulErrors2 = 0
+
 misattributedHappySad = 0
 misattributedHappyAngry = 0
 misattributedHappyFearful = 0
@@ -84,11 +92,13 @@ misattributedAngryFearful = 0
 misattributedFearfulHappy = 0
 misattributedFearfulSad = 0
 misattributedFearfulAngry = 0
+
 maleHappyErrors = 0
 maleSadErrors = 0
 maleAngryErrors = 0
 maleFearfulErrors = 0
 maleTotalErrors = 0
+
 femaleHappyErrors = 0
 femaleSadErrors = 0
 femaleAngryErrors = 0
@@ -108,7 +118,8 @@ dictionarydefinitions = ["skippedErrors","totalErrors","totalerrors","happyHighI
                          "misattributedAngryFearful","misattributedFearfulHappy","misattributedFearfulSad",
                          "misattributedFearfulAngry","errorsByMisjudgement","danvasubtest","maleHappyErrors",
                          "maleSadErrors","maleAngryErrors","maleFearfulErrors","maleTotalErrors",
-                         "femaleHappyErrors","femaleSadErrors","femaleAngryErrors","femaleFearfulErrors","femaleTotalErrors",]
+                         "femaleHappyErrors","femaleSadErrors","femaleAngryErrors","femaleFearfulErrors","femaleTotalErrors",
+                         "happyErrors2","sadErrors2","angryErrors2","fearfulErrors2"]
 # this is a comment "before experiment"
 
 
@@ -683,13 +694,24 @@ for i in currentLoop.trialList :
     dictionaryloop = dictionaryloop + 1
 
 totalerrors = totalErrors
+totalErrors1 = totalErrors
+totalErrors2 = totalErrors
+
+happyErrors2 = happyErrors
+sadErrors2 = sadErrors
+angryErrors2 = angryErrors
+fearfulErrors2 = fearfulErrors
+
+totalErrors1 = totalErrors
+totalErrors2 = totalErrors
+
 errorsByMisjudgement = totalErrors - skippedErrors
 
 for i in (dictionarydefinitions):
     data_dict [dictionarydefinitions[dictionaryloop2]] = (eval(dictionarydefinitions[dictionaryloop2]))
     # I have no idea what I was doing with the below.  It should probably just go in the other section
     # stimsList['stim'+str((dictdefincr2 - 1))] = (currentLoop.trialList[(dictdefincr2)-1]['stimFile'])
-    dictionaryloop2 = dictionaryloop2 + 1+
+    dictionaryloop2 = dictionaryloop2 + 1
 
 
 data_dict.update(stimsList)
@@ -697,7 +719,8 @@ data_dict.update(expInfo)
 data_dict.update(incorrectAnswers)
 data_dict.update(correctAnswers)
 
-fillpdfs.write_fillable_pdf('blank2.pdf', 'completed.pdf', data_dict, flatten=False)
+
+fillpdfs.write_fillable_pdf('blankDocument.pdf', 'completed1.pdf', data_dict, flatten=False)
 os.startfile('completed.pdf')
 # "this is an end experiment comment
 
