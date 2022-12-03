@@ -922,7 +922,7 @@ femaleTotalErrorsrectangle = ImageDraw.Draw(genderErrorsGraph)
 maleTotalErrorsrectangle.rectangle(malerectangle, fill =malecolor, outline=None)
 femaleTotalErrorsrectangle.rectangle(femalerectangle, fill =femalecolor, outline=None)
 
-genderErrorsGraph.show()
+# genderErrorsGraph.show()
 genderErrorsGraph.save("graphPictures/errorsbygender.jpg")
 
 
