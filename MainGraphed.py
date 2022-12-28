@@ -554,9 +554,9 @@ for i in currentLoop.trialList :
         # this will give us the errors
         correctAnswerKey = currentLoop.trialList[dictionaryloop]['correctAnswer']
         
-        if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+        if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
             maleTotalErrors = maleTotalErrors + 1
-        elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+        elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
             femaleTotalErrors = femaleTotalErrors + 1
         else:
             pass
@@ -588,9 +588,9 @@ for i in currentLoop.trialList :
                 misattributedHappyFearful = misattributedHappyFearful + 1
             else:
                 pass
-            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
                 maleHappyErrors = maleHappyErrors + 1
-            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
                 femaleHappyErrors = femaleHappyErrors + 1
             else: 
                 pass
@@ -613,9 +613,9 @@ for i in currentLoop.trialList :
             else:
                 pass
             
-            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
                 maleSadErrors = maleSadErrors + 1
-            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
                 femaleSadErrors = femaleSadErrors + 1
             else: 
                 pass
@@ -638,9 +638,9 @@ for i in currentLoop.trialList :
             else:
                 pass
             
-            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
                 maleAngryErrors = maleAngryErrors + 1
-            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
                 femaleAngryErrors = femaleAngryErrors + 1
             else: 
                 pass
@@ -663,9 +663,9 @@ for i in currentLoop.trialList :
             else:
                 pass
             
-            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
+            if currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
                 maleFearfulErrors = maleFearfulErrors + 1
-            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 2:
+            elif currentLoop.trialList[dictionaryloop]['stimuliGender'] == 1:
                 femaleFearfulErrors = femaleFearfulErrors + 1
             else:
                 pass
